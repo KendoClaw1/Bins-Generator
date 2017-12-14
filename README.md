@@ -16,3 +16,7 @@ optional arguments:
   -n N           Number of Bins to generate (Default = 50)
 
   -o result.txt  Output file
+
+## Usage example:
+
+python generator.py -b 471786xxxxxxxxxx -n 100 -o result.txt
