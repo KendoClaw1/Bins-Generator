@@ -33,14 +33,16 @@ def checkbin(bintocheck):
 	return req.status_code
 
 
-
 def main():
-	for x in range(0,int(howmanybins)):
+	bins = 0
+	while bins != howmanybins:
 		replaced = re.sub('x', lambda x: str(randint(0,9)), bincode)
 		if checkbin(replaced) == 200:
 			print replaced
 			filetosave.write(replaced)
 			filetosave.write("\n")
+			bins += 1
+
 
 			
 try:
@@ -48,7 +50,7 @@ try:
 	if args.n:
 		howmanybins =  args.n
 	else:
-		howmanybins = 50
+		howmanybins = 5
 	filetosave = open(args.o,'a')
 	main()
 except KeyboardInterrupt:
