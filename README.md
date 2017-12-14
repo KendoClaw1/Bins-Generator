@@ -1,5 +1,7 @@
 # Bins-Generator
 
+this tool will generate a list of CC's based on a bin provided by the user, then starts verifying the generated CC's using donate.mozilla.com payment gateway. (Mozilla uses Luhn Algorithm as a first check) 
+
 
 usage: generator.py [-h] [-b BIN] [-n N] [-o result.txt]
 
